@@ -2,3 +2,15 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# virtualenv
+.venv/
+.env/
+.ENV/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
