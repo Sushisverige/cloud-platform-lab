@@ -14,6 +14,7 @@ LATENCY = Histogram("http_request_duration_seconds", "HTTP request latency", ["p
 
 app = FastAPI(title="cloud-platform-lab")
 
+
 @app.middleware("http")
 async def metrics_middleware(request: Request, call_next):
     start = time.time()
@@ -33,15 +34,18 @@ async def metrics_middleware(request: Request, call_next):
     ).inc()
     return response
 
+
 @app.get("/health")
 def health():
     if os.getenv("FAIL_HEALTH", "0") == "1":
         return JSONResponse({"status": "down"}, status_code=503)
     return {"status": "ok"}
 
+
 @app.get("/hello")
 def hello():
     return {"message": "hello from cloud-platform-lab"}
+
 
 @app.get("/metrics")
 def metrics():
