@@ -1,3 +1,5 @@
+![ci](https://github.com/Sushisverige/cloud-platform-lab/actions/workflows/ci.yml/badge.svg)
+
 # cloud-platform-lab
 
 SRE/クラウド基盤の基礎実績として、ミニAPIを作成し、メトリクス公開 + Prometheusで収集し、運用ドキュメント（Runbook/SLO/Postmortem）まで揃えました。
