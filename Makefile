@@ -7,15 +7,15 @@ help:
 	@echo "make run    - run app (uvicorn)"
 
 lint:
-	ruff check .
-	ruff format --check .
+	python -m ruff check .
+	python -m ruff format --check .
 
 format:
-	ruff check . --fix
-	ruff format .
+	python -m ruff check . --fix
+	python -m ruff format .
 
 test:
-	pytest -q
+	python -m pytest -q
 
 run:
 	python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
